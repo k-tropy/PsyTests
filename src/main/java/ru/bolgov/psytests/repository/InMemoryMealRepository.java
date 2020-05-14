@@ -1,7 +1,6 @@
-package ru.javawebinar.topjava.repository;
+package ru.bolgov.psytests.repository;
 
 import ru.javawebinar.topjava.model.Meal;
-import ru.javawebinar.topjava.util.MealsUtil;
 
 import java.util.Collection;
 import java.util.Map;
@@ -12,9 +11,9 @@ public class InMemoryMealRepository implements MealRepository {
     private Map<Integer, Meal> repository = new ConcurrentHashMap<>();
     private AtomicInteger counter = new AtomicInteger(0);
 
-    {
-        MealsUtil.meals.forEach(this::save);
-    }
+    /*{
+        ru.javawebinar.topjava.util.TestFilterUtil.meals.forEach(this::save);
+    }*/
 
     @Override
     public Meal save(Meal meal) {

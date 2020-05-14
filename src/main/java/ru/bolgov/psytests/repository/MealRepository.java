@@ -1,4 +1,4 @@
-package ru.javawebinar.topjava.repository;
+package ru.bolgov.psytests.repository;
 
 import ru.javawebinar.topjava.model.Meal;
 

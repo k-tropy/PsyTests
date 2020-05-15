@@ -1,18 +1,18 @@
 package ru.bolgov.psytests.repository;
 
-import ru.javawebinar.topjava.model.Meal;
+import ru.bolgov.psytests.model.Record;
 
 import java.util.Collection;
 
-public interface MealRepository {
+public interface TestsRepository {
     // null if not found, when updated
-    Meal save(Meal meal);
+    Record save (Record record);
 
     // false if not found
     boolean delete(int id);
 
     // null if not found
-    Meal get(int id);
+    Record get(int id);
 
-    Collection<Meal> getAll();
+    Collection<Record> getAll();
 }

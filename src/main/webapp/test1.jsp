@@ -17,7 +17,7 @@
     Если в группе несколько утверждений в равной мере хорошо описывают Ваше состояние,
     обведите каждое из них. Прежде чем сделать выбор, внимательно прочтите все
     утверждения в каждой группе.</p>
-<form method="post" action="test1">
+<form method="post" action="user-page">
 <table border="1" cellpadding="8" cellspacing="0">
     <thead>
     <tr>

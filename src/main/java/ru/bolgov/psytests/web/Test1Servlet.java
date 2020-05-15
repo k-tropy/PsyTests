@@ -9,6 +9,18 @@ import java.io.IOException;
 
 public class Test1Servlet extends HttpServlet {
 
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
+        for (int i=1; i<22;i++) {
+            String s="q"+i;
+            int v=Integer.parseInt(req.getParameter(s));
+            System.out.println("q"+i+" " +v);
+
+
+            }
+        System.out.println("Всё");
+        response.sendRedirect("user-page");
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

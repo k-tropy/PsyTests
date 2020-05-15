@@ -17,6 +17,7 @@
     Если в группе несколько утверждений в равной мере хорошо описывают Ваше состояние,
     обведите каждое из них. Прежде чем сделать выбор, внимательно прочтите все
     утверждения в каждой группе.</p>
+<form method="post" action="test1">
 <table border="1" cellpadding="8" cellspacing="0">
     <thead>
     <tr>
@@ -236,8 +237,9 @@
     </tr>
 
 </table>
-
+<button onclick="window.history.back()" type="button">Cancel</button>
 <p style ="color:red; font-weight: 500;">!Проверьте пропущенные вопросы!</p>
 <p><input type="submit" value="Посчитать результат"></p>
+</form>
 </body>
 </html>

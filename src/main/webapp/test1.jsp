@@ -18,6 +18,7 @@
     обведите каждое из них. Прежде чем сделать выбор, внимательно прочтите все
     утверждения в каждой группе.</p>
 <form method="post" action="user-page">
+    <input name="numberTest" value="1">
 <table border="1" cellpadding="8" cellspacing="0">
     <thead>
     <tr>

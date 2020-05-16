@@ -41,7 +41,9 @@ public class UserPageServlet extends HttpServlet {
             int v=Integer.parseInt(req.getParameter("q"+i));
             result.add(v);
         }
-        repository.save(new Record(null,1, LocalDate.now(),1, result ));
+
+        repository.save(new Record(null,1, LocalDate.now(),
+                Integer.parseInt(req.getParameter("numberTest")), result ));
         response.sendRedirect("user-page");
     }
 }

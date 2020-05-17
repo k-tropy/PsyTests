@@ -3,11 +3,13 @@
 
 <html>
 <head>
-    <title>Users</title>
+    <title>Результаты тестов</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-<h3><a href="index.html">Home</a></h3>
-<hr>
+<%@include file="./fragment/header.html"%>
+<div class="w3-row" style="min-height: 100%; max-width: 1280px; width: 100%">
+
 <h2>Результаты ваших тестов</h2>
 <br><br>
 <table border="1" cellpadding="8" cellspacing="0">
@@ -30,5 +32,7 @@
     </c:forEach>
 </table>
 
+</div>
+<%@include file="./fragment/footer.jsp"%>
 </body>
 </html>

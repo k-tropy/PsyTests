@@ -2,13 +2,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Users</title>
+    <title>Шкала депрессии А.Бека</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-<h3><a href="index.html">Home</a></h3>
-<hr>
-<h2>Users</h2>
-<p>Ваше имя <c:out value="${param.name}"/></p>
+<%@include file="./fragment/header.html"%>
+
+<div class="w3-row">
+    <div class="w3-col" style="width:20%"><p></p></div>
+    <div class="w3-col" style="width:60%">
+
 <h1>Шкала депрессии А.Бека</h1>
 
 <p>Инструкция. Вам предлагается ряд утверждений. Выберите одно утверждение в
@@ -18,10 +21,10 @@
     обведите каждое из них. Прежде чем сделать выбор, внимательно прочтите все
     утверждения в каждой группе.</p>
 <form method="post" action="user-page">
-    <input name="numberTest" value="1">
-<table border="1" cellpadding="8" cellspacing="0">
+    <input name="numberTest" value="1" type="hidden">
+<table class="w3-table-all" >
     <thead>
-    <tr>
+    <tr class="w3-green">
         <th>№</th>
         <th>Выберите один из вариантов ответа</th>
     </tr>
@@ -238,9 +241,16 @@
     </tr>
 
 </table>
-<button onclick="window.history.back()" type="button">Cancel</button>
-<p style ="color:red; font-weight: 500;">!Проверьте пропущенные вопросы!</p>
-<p><input type="submit" value="Посчитать результат"></p>
+
+    <p style ="color:red; font-weight: 500;">!Проверьте пропущенные вопросы!</p>
+<p>
+    <button onclick="window.history.back()" type="button">Cancel</button>
+    <input type="submit" value="Посчитать результат">
+</p>
 </form>
+    </div>
+    <div class="w3-col" style="width:20%"><p></p></div>
+</div>
+<%@include file="fragment/footer.jsp"%>
 </body>
 </html>

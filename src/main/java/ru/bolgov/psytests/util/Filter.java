@@ -18,9 +18,9 @@ public class Filter {
                     Arrays.asList(3)),
             new Record(null,1, LocalDate.of(2020, Month.MAY,2), 1,
                     Arrays.asList(3,3,1)),
-            new Record(null,2, LocalDate.of(2020, Month.MAY,5), 1,
+            new Record(null,2, LocalDate.of(2020, Month.MAY,5), 3,
                     Arrays.asList(3,3,1,1,1,1,1,1,2,2,2,2,2,2,2,1,2,2,3,3,2)),
-            new Record(null,2, LocalDate.of(2020, Month.MAY,5), 1,
+            new Record(null,2, LocalDate.of(2020, Month.MAY,5), 4,
                     Arrays.asList(1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0)));
 
     public static List<RecordTo> GetResponse(Collection<Record> records){ //подаём отлильтрованный лист с записями для формирования ответа

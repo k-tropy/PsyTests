@@ -5,7 +5,7 @@ import ru.bolgov.psytests.model.Record;
 import ru.bolgov.psytests.repository.InMemoryRecordRepository;
 import ru.bolgov.psytests.repository.TestsRepository;
 import ru.bolgov.psytests.util.Filter;
-import ru.bolgov.psytests.util.TestResponse;
+
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -25,17 +25,16 @@ public class UserPageServlet extends HttpServlet {
         super.init(config);
         repository = new InMemoryRecordRepository();
     }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-        /* List<RecordTo> tests= Filter.GetResponse(Filter.tRecord);*/
         request.setAttribute("tests", Filter.GetResponse(repository.getAll()));
         request.getRequestDispatcher("/user-page.jsp").forward(request, response);
-        // response.sendRedirect("users2");
     }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
+        //Если не 21 вопрос, то добавляем в тесте q21=0
         List <Integer> result=new ArrayList<>(21);
         for (int i=1; i<22;i++) {
             int v=Integer.parseInt(req.getParameter("q"+i));
@@ -44,6 +43,7 @@ public class UserPageServlet extends HttpServlet {
 
         repository.save(new Record(null,1, LocalDate.now(),
                 Integer.parseInt(req.getParameter("numberTest")), result ));
+
         response.sendRedirect("user-page");
     }
 }

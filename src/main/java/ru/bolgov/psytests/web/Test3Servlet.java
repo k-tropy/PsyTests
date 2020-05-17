@@ -11,8 +11,7 @@ public class Test3Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
         request.getRequestDispatcher("/test3.jsp").forward(request, response);
-        // response.sendRedirect("users2");
+
     }
 }

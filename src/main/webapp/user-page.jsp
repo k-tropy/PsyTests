@@ -5,13 +5,16 @@
 <head>
     <title>Результаты тестов</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./fragment/mycss.css">
+
 </head>
 <body>
 <%@include file="./fragment/header.html"%>
-<div class="w3-row" style="min-height: 100%; max-width: 1280px; width: 100%">
 
-<h2>Результаты ваших тестов</h2>
-<br><br>
+<div class="mycontent">
+
+<h1>Результаты ваших тестов</h1>
+
 <table border="1" cellpadding="8" cellspacing="0">
     <thead>
     <tr>

@@ -1,0 +1,55 @@
+.mycontent, .myfooter-content, .myheader-content{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mycontent{
+    min-height: 100%;
+}
+
+.myfooter, .myheader{
+    background-color:#4CAF50;
+    color:#FFFFCC !important;
+    width: 100%;
+}
+button, input{
+
+    border:none;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+button:hover, input:hover{
+    background-color:#ff9800;
+    color:#616161;
+}
+
+.myfooter-content li{
+    list-style-type: none;
+}
+
+.myheader-content{
+    padding-left:20px;
+    font-style: italic;
+    font-weight: 400;
+    font-size:32px;
+}
+
+.mycontent table{
+    margin: 2em auto 0 auto;
+}
+
+.mycontent h1,h2,h3,h4,h5,h6{
+    text-align: center !important;
+    margin:1em auto !important;
+}
+
+.mycontent input{
+    margin:0 1em;
+}
+
+.mycontent span {
+    text-align: center;
+}
+
